@@ -1,0 +1,15 @@
+<main class="p-3">
+  <h1 class="text-center">Buscador de Anime</h1>
+  <form class="mb-3" [formGroup]="form">
+    <mat-form-field style="width: 100%;">
+      <input [formControl]="searchControl" matInput placeholder="Buscar Anime" />
+    </mat-form-field>
+  </form>
+  <section class="grid">
+    <div class="row">
+      <div class="col-4" *ngFor="let anime of animes">
+        <app-anime-item [anime]="anime"></app-anime-item>
+      </div>
+    </div>
+  </section>
+</main>
